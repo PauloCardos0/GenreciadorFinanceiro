@@ -8,7 +8,6 @@ import { useState } from 'react';
 
 const EditCategory = () => {
   const [title, setTitle] = useState('');
-  const [percentage, setPercentage] = useState(0);
 
   const { isVisible, category } = useSelector((state) => state.ui.editCategory);
   const dispatch = useDispatch();
@@ -19,20 +18,18 @@ const EditCategory = () => {
   const editCategory = (e) => {
     e.preventDefault();
 
-    if (!title || !percentage) return;
+    if (!title) return;
 
-    editCategoryHandler('categorias', category.id, { title, percentage });
+    editCategoryHandler('categorias', category.id, { title });
 
     dispatch(toggleEditCategory(null));
     setTitle('');
-    setPercentage(0);
   };
 
   const deleteCategory = () => {
     deleteCategoryHandler('categorias', category.id);
     dispatch(toggleEditCategory(null));
     setTitle('');
-    setPercentage(0);
   };
 
   return (
@@ -51,19 +48,6 @@ const EditCategory = () => {
               id='title'
               name='title'
               onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
-          <div className={styles['label-input']}>
-            <label htmlFor='porcentagem' className='p'>
-              Porcentagem alocada
-            </label>
-            <input
-              type='text'
-              id='porcentagem'
-              name='porcentagem'
-              placeholder='%'
-              className='max-width'
-              onChange={(e) => setPercentage(e.target.value)}
             />
           </div>
           <div className={styles.buttons}>

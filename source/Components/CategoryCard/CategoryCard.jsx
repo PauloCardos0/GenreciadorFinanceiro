@@ -18,7 +18,6 @@ const CategoryCard = ({ data }) => {
       </div>
       <h2>{title}</h2>
       <h3>{formatedAmount}</h3>
-      <h4>Alocado: {percentage}%</h4>
     </div>
   );
 };
