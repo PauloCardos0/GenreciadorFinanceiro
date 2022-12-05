@@ -42,6 +42,8 @@ const CategoriesPie = () => {
   return (
     <div>
       <Doughnut options={options} data={data} />
+   
+      
     </div>
   );
 };

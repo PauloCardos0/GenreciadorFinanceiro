@@ -5,6 +5,9 @@
   grid-template-columns: 2fr 1fr;
   margin-bottom: 5rem;
   gap: 3rem;
+  margin-left: 20%;
+
+  
 
   @include device('tablet') {
     grid-template-columns: 1fr;
@@ -17,6 +20,7 @@
 
     @include device('mobile') {
       max-width: 30rem;
+      margin-left: -20%;
     }
   }
 }

@@ -22,8 +22,9 @@ const TransactionCard = ({ transaction }) => {
       </div>
       <div className={styles.price}>
         <span className={styles[type]}>{formatedAmount}</span>
-      </div>
+      </div> 
     </li>
+   
   );
 };
 

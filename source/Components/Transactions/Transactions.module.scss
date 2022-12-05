@@ -3,6 +3,9 @@
 .section {
   display: flex;
   gap: 5rem;
+  background-color: rgb(80, 16, 80);
+  border-radius: 1.5rem;
+  
 
   @include device('tablet') {
     flex-direction: column;
